@@ -28,6 +28,25 @@
   color: #61dafb;
 }
 
+.HomeSplashImage {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  /* height: auto;
+  color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; */
+  
+
+}
+
+
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
