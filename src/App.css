@@ -28,31 +28,13 @@
   color: #61dafb;
 }
 
-.asdfasdf {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  /* background-image: HomeSplash.JPG; */
-  /* height: auto;
-  color: #f8f8f8;
-  display: flex;
+.Universal-Config {
+  background-color: #282c34;
+  align-items: center;
+  /* display: flex; */ /* breaks home image */
   flex-direction: column;
-  justify-content: center;
-  align-content: center; */
-  
-
-}
-
-
-
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: white;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  text-align: center;
 }
