@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import MainNavbar from "./Components/MainNavbar";
 import Home from "./Pages/Home/Home";
-import Projects from "./Pages/Projects/Projects";
+import WebProjects from "./Pages/Projects/WebProjects/WebProjects";
 import TestPage from "./Pages/TestPage";
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
       <div className="Universal-Config">
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/webprojects' element={<Projects />} />
+          {/* TODO webprojects, add props and map to webprojectinstances */}
+          <Route path='/webprojects' element={<WebProjects />} />
           <Route path='/testpage' element={<TestPage />} />
         </Routes>
       </div>

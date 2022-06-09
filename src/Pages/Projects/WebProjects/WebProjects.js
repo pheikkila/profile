@@ -1,7 +1,5 @@
 import { Container } from "react-bootstrap";
-import WebProjectInstance from "./WebProjectInstance";
-// import { Link } from "react-router-dom";
-// import HomeSplash from "../../Images/HomeSplash.jpg";
+import WebProjectInstance from "../WebProjects/WebProjectInstance";
 
 
 export default function WebProjects() {

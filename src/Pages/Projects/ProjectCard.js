@@ -1,4 +1,4 @@
-import { Col, Container, Row, Card } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
 
 export default function ProjectCard(props) {
     return (

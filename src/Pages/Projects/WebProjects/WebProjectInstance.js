@@ -30,6 +30,11 @@ export default function WebProjectInstance(props) {
                         <Col>
                             <Button variant="primary">More Info</Button>
                         </Col>
+                        {props.props.website_url &&
+                            <Col>
+                                <Button variant="primary" href={props.props.website_url} target="_blank">Website</Button>
+                            </Col>
+                        }
 
                     </Row>
 
