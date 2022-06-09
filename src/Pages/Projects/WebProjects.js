@@ -1,6 +1,7 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import HomeSplash from "../../Images/HomeSplash.jpg";
+import { Container } from "react-bootstrap";
+import WebProjectInstance from "./WebProjectInstance";
+// import { Link } from "react-router-dom";
+// import HomeSplash from "../../Images/HomeSplash.jpg";
 
 
 export default function WebProjects() {
@@ -9,31 +10,41 @@ export default function WebProjects() {
             <div className="fs-1">
                 Web Projects
                 <hr />
-                <div>
-                    Personal Website
-                    <Row className="mt-1 d-flex align-items-center">
-                        <Col>
-                            <Image fluid src={HomeSplash} className="thumbnail" />
-                        </Col>
-                        <Col className="fs-4 text-start align-middle">
-                            <div>
-                                I built this website to have an idea of everything that goes into creating a website. As an added perk, I get a place to talk about some of my interests!
-                            </div>
-                            <br />
-                            <div>
-                                Language: <Link to={"https://www.javascript.com"}>Javascript</Link>
-                            </div>
-                            <br />
-                            <div>
-                                Tools: {' '}
-                                <Link to={"https://reactjs.org/"}>React</Link>, {' '}
-                                <Link to={"https://react-bootstrap.github.io/"}>React Bootstrap</Link>, {' '}
-                                <Link to={"https://nodejs.org/en/about/"}>NodeJS</Link>
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-            </div>
+                <WebProjectInstance props={personalproj()} />
+                <br />
+                <WebProjectInstance props={affordaustin()} />
+                <br />
+            </div >
         </Container >
     );
 }
+
+
+//todo put this in a database 
+const personalproj = () => {
+    return (
+        {
+            "title": "Personal Website",
+            "image_url": "./images/HomeSplash.jpg",
+            "description": "I built this website to have an idea of everything that goes into creating a website. As an added perk, I get a place to talk about some of my interests!",
+            "language": "Javascript",
+            "tools": "React, React Bootstrap, NodeJS, AWS",
+            "gitrepo": "https://github.com/pheikkila/profile",
+            "website_url": ""
+        }
+    );
+};
+
+const affordaustin = () => {
+    return (
+        {
+            "title": "Afford Austin",
+            "image_url": "./images/AffordAustin.jpg",
+            "description": "This website was a part of my software engineering class where we had to create an internet database using three different APIs.",
+            "language": "Javascript",
+            "tools": "React, React Bootstrap, NodeJS, Flask, SQLAlchemy, PostgreSQL, Docker, Postman, Jest, Selenium",
+            "gitrepo": "https://gitlab.com/dinesh.k.balakrishnan/cs373-website",
+            "website_url": "https://www.affordaustin.me/"
+        }
+    );
+};

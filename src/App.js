@@ -12,7 +12,7 @@ function App() {
       <div className="Universal-Config">
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/projects' element={<Projects />} />
+          <Route path='/webprojects' element={<Projects />} />
           <Route path='/testpage' element={<TestPage />} />
         </Routes>
       </div>

@@ -15,7 +15,8 @@ text-align: center;
 
 
 .HomeSplashImage {
-    background-image: url('../../Images/HomeSplash.jpg');
+    /* background-image: url('../../Images/HomeSplash.jpg'); */
+    background-image: url('/public/images/HomeSplash.jpg');
     height: 100vh;
     width: 100%;
     background-position: center;
