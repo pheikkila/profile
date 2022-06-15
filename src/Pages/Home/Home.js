@@ -9,10 +9,12 @@ export default function Home() {
     useEffect(() => {
         window.addEventListener('scroll', function () {
             let value = window.scrollY;
-            let title = document.getElementById('Website-Title');
+            let mainTitle = document.getElementById('Website-Title');
+
             let bg = document.getElementById('First-BG-Img');
+
             // 2/5 not official number. Just prevents bleeding into the next div
-            title.style.marginTop = Math.min(value * .8, bg.offsetHeight * 2 / 5) + 'px';
+            mainTitle.style.marginTop = Math.min(value * .8, bg.offsetHeight * 2 / 5) + 'px';
         });
     }, []);
 
@@ -29,20 +31,25 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <div className="cards">
 
-                    <Container>
-                        <Row >
-                            <Col>
-                                <ProjectCard />
-                            </Col>
-                            <Col>
-                                <ProjectCard />
-                            </Col>
-                        </Row>
-                    </Container>
+                <div className="median" />
+
+                <div className="HomeSplash bg-2">
+
+                    <div className="projects-title fs-1">
+                        My Projects
+                    </div>
+                    <div className="navigation-cards">
+                        <Col>
+                            <ProjectCard props="Web Projects" />
+                            <ProjectCard props="iOS" />
+                        </Col>
+                        <Col className="d-flex justify-content-end">
+                            <ProjectCard props="Big Data" />
+                            <ProjectCard props="Misc." />
+                        </Col>
+                    </div>
                 </div>
-                <div className="HomeSplash bg-2" />
 
                 <p>
                     Edit <code>src/App.js</code> and save to reload.

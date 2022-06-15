@@ -23,18 +23,43 @@ text-align: center;
 
 .bg-1 {
     background-image: url('/public/images/Island.jpg');
+    z-index: 10;
 }
 
 .bg-2 {
     background-image: url('/public/images/HomeSplash.jpg');
 }
 
-.cards {
-    background-color: var(#252422);
-    height: 100vh;
+.median {
+    background-color: black;
+    height: 10vh;
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 10;
+}
+
+.projects-title {
+    position:fixed;
+
+    top: 13%;
+    width: 100%;
+    color: black;
+    font-weight:1000;
+    text-shadow: 1px 1px white;
+    letter-spacing: 2px;
+    z-index: 5;
+}
+
+.navigation-cards {
+    position: fixed;
+
+    top:25%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    background-color: aqua;
+
 }
 
 .main-title {

@@ -1,16 +1,12 @@
-import { Col, Card } from "react-bootstrap";
+import { Col, Card, Button } from "react-bootstrap";
 
 export default function ProjectCard(props) {
     return (
-        <Col>
-            <Card>
-                <Card.Body>
-                    <Card.Img></Card.Img>
-                    <Card.Title className="fs-3">Personal Webpage</Card.Title>
-                    <Card.Text>A website to share my interests and projects I have done.</Card.Text>
-                    <a href="/" className="btn btn-primary">Go somewhere</a>
-                </Card.Body>
-            </Card>
-        </Col>
+        <Card style={{ width: '18rem' }} bg="dark" text="white" className="mb-4">
+            <Card.Body>
+                <Card.Title>{props.props}</Card.Title>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+        </Card>
     );
 }
