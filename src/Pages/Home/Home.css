@@ -3,7 +3,7 @@ text-align: center;
 }
 
 .App-header {
-    background-color: #282c34;
+    background-color: #252422;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,27 +13,48 @@ text-align: center;
     color: black;
 }
 
-
-.HomeSplashImage {
-    /* background-image: url('../../Images/HomeSplash.jpg'); */
-    background-image: url('/public/images/HomeSplash.jpg');
+.HomeSplash {
+    background-attachment: fixed;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     background-position: center;
-    background-position-y: 60%;
-    display:unset;
 }
 
-
-
-
-
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.bg-1 {
+    background-image: url('/public/images/Island.jpg');
 }
+
+.bg-2 {
+    background-image: url('/public/images/HomeSplash.jpg');
+}
+
+.cards {
+    background-color: var(#252422);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-title {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.fade-in-text {
+    animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.scroll {
+    width: 100%;
+    height: 100vh;
+}
+

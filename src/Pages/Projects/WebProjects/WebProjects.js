@@ -12,6 +12,12 @@ export default function WebProjects() {
                 <br />
                 <WebProjectInstance props={affordaustin()} />
                 <br />
+                <WebProjectInstance props={affordaustin()} />
+                <br />
+                <WebProjectInstance props={affordaustin()} />
+                <br />
+                <WebProjectInstance props={affordaustin()} />
+                <br />
             </div >
         </Container >
     );

@@ -14,7 +14,7 @@ function MainNavbar() {
             {/* <Nav.Link as={Link} to="/projects">Projects</Nav.Link> */}
             <NavDropdown title="Projects" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/webprojects">Web Projects</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={Link} to="/">
                 Another action
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
