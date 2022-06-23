@@ -1,8 +1,7 @@
 // import logo from "../logo.svg";
 import "./Home.css";
-import ProjectCard from "../Projects/ProjectCard";
-import { Row, Col, Container } from "react-bootstrap";
 import { useEffect } from "react";
+import NavigationCards from "./NavigationCards";
 
 export default function Home() {
 
@@ -34,24 +33,7 @@ export default function Home() {
 
                 <div className="median" />
 
-                <div className="HomeSplash bg-2">
-
-                    {/* <div className="projects-title fs-1">
-                        My Projects
-                    </div> */}
-                    <Container >
-                        <Row >
-                            <Col >
-                                <ProjectCard name={"Web"} link={"/webprojects"} />
-                                <ProjectCard name={"Big Data"} />
-                            </Col>
-                            <Col >
-                                <ProjectCard name={"iOS"} />
-                                <ProjectCard name={"Misc"} />
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+                <NavigationCards />
 
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
