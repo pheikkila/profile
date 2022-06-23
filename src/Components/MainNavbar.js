@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 
 function MainNavbar() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" style={{
+      position: "fixed", top: "0", width: "100%", "zIndex": "10000"
+    }}>
       <Container>
         <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,7 +28,7 @@ function MainNavbar() {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar >
   );
 }
 

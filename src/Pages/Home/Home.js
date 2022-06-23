@@ -36,19 +36,21 @@ export default function Home() {
 
                 <div className="HomeSplash bg-2">
 
-                    <div className="projects-title fs-1">
+                    {/* <div className="projects-title fs-1">
                         My Projects
-                    </div>
-                    <div className="navigation-cards">
-                        <Col>
-                            <ProjectCard props="Web Projects" />
-                            <ProjectCard props="iOS" />
-                        </Col>
-                        <Col className="d-flex justify-content-end">
-                            <ProjectCard props="Big Data" />
-                            <ProjectCard props="Misc." />
-                        </Col>
-                    </div>
+                    </div> */}
+                    <Container >
+                        <Row >
+                            <Col >
+                                <ProjectCard name={"Web"} link={"/webprojects"} />
+                                <ProjectCard name={"Big Data"} />
+                            </Col>
+                            <Col >
+                                <ProjectCard name={"iOS"} />
+                                <ProjectCard name={"Misc"} />
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
 
                 <p>

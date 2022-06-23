@@ -1,11 +1,12 @@
+import "./ProjectCard.css";
 import { Col, Card, Button } from "react-bootstrap";
 
-export default function ProjectCard(props) {
+export default function ProjectCard({ name, link }) {
     return (
-        <Card style={{ width: '18rem' }} bg="dark" text="white" className="mb-4">
+        <Card bg="dark" text="white" className="mb-2 card">
             <Card.Body>
-                <Card.Title>{props.props}</Card.Title>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Title>{name}</Card.Title>
+                <Button href={link} variant="primary">View Projects</Button>
             </Card.Body>
         </Card>
     );
