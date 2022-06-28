@@ -29,6 +29,7 @@ text-align: center;
 .bg-2 {
     background-image: url('/public/images/HomeSplash.jpg');
     background-attachment: scroll;
+    z-index: 10;
 }
 
 .median {

@@ -2,6 +2,7 @@
 import "./Home.css";
 import { useEffect } from "react";
 import NavigationCards from "./NavigationCards";
+import RoachKiller from "./RoachKiller";
 
 export default function Home() {
 
@@ -34,6 +35,8 @@ export default function Home() {
                 <div className="median" />
 
                 <NavigationCards />
+
+                <RoachKiller />
 
                 <p>
                     Edit <code>src/App.js</code> and save to reload.

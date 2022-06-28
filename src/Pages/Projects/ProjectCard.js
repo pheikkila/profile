@@ -1,5 +1,5 @@
 import "./ProjectCard.css";
-import { Col, Card, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 export default function ProjectCard({ name, link }) {
     return (
