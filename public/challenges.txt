@@ -1,0 +1,7 @@
+fun problems
+
+- what is the height of an asset 157x157px when rotated 20 degrees
+	- ran into this problem creating a max height for my fridge. 
+	  It's an interesting problem I could have hacked through, but I was curious how I'd go about solving this mathemetically
+
+- 

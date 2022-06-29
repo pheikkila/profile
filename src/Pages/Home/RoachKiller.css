@@ -26,8 +26,9 @@
 .roach-img {
   /* mix-blend-mode:screen; */
   position: absolute;
-  top:auto;
-  width:5%;
+  left:0;
+  width:10%;
+  right: 0;
 }
 
 .fridge-img {

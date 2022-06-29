@@ -38,7 +38,7 @@ export default function Home() {
 
                 <RoachKiller />
 
-                <p>
+                {/* <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <a
@@ -48,7 +48,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                 >
                     Learn React
-                </a>
+                </a> */}
             </div>
         </div >
     );
