@@ -10,34 +10,50 @@ export default function RoachKiller() {
     // }
 
     useEffect(() => {
+        var roachHasDied = false;
+        const ROACH_KILLER_SCENE_PX = 4646;
         window.addEventListener('scroll', function () {
-            let windowScrollAdjusted = window.scrollY - (2.1 * window.innerHeight);
-            let functionalWidth = window.innerWidth * 3 / 4;
-            let height = window.innerHeight;
-            // 4646 size of entire roach killer scenery
-            let maxWindowScrollAdjusted = 4646 - height;
-            let fridgeSize = window.innerWidth * .15;
-            let roachSize = window.innerWidth * .10;
+            if (!roachHasDied) {
+                let topComponents = (2.1 * window.innerHeight);
+                let windowScrollAdjusted = window.scrollY - topComponents;
+                let functionalWidth = window.innerWidth * 3 / 4;
+                let height = window.innerHeight;
 
-            let landingPointX = (functionalWidth - fridgeSize);
-            let landingPointY = (((height * 3) / 4) - fridgeSize);
+                let maxWindowScrollAdjusted = ROACH_KILLER_SCENE_PX - height;
+                let fridgeSize = window.innerWidth * .15;
+                let roachSize = window.innerWidth * .10;
 
-            let landingPointScalingX = landingPointX / (maxWindowScrollAdjusted);
-            let landingPointScalingY = landingPointY / (maxWindowScrollAdjusted);
+                // landing points, relative to current window position
+                // adjust these to change desired landing position on screen
+                let landingPointX = (functionalWidth - fridgeSize);
+                let landingPointY = (((height * 3) / 4) - fridgeSize);
 
-            let roach = document.getElementById('roach');
-            let fridge = document.getElementById('fridge');
+                let landingPointScalingX = landingPointX / (maxWindowScrollAdjusted);
+                let landingPointScalingY = landingPointY / (maxWindowScrollAdjusted);
 
-            fridge.style.right = landingPointScalingX * windowScrollAdjusted + 'px';
-            fridge.style.top = landingPointScalingY * windowScrollAdjusted + 'px';
+                let roach = document.getElementById('roach');
+                let fridge = document.getElementById('fridge');
 
-            /* (1.5 * roach), (roachSize / 2) size arbitrary */
-            roach.style.left = window.innerWidth - landingPointX - 1.5 * roachSize + 'px';
-            roach.style.top = 2.1 * window.innerHeight + maxWindowScrollAdjusted + landingPointY + roachSize / 2 + 'px';
+                fridge.style.right = landingPointScalingX * windowScrollAdjusted + 'px';
+                fridge.style.top = landingPointScalingY * windowScrollAdjusted + 'px';
 
-            if (Math.round(landingPointY) === Math.round(landingPointScalingY * windowScrollAdjusted)) {
-                roach.src = "/images/RIPRoachy.png";
-                console.log("What have you done? How can you live with yourself?");
+                /* (1.4 * roach), (roachSize / 2) size arbitrary */
+                roach.style.left = window.innerWidth - landingPointX - 1.4 * roachSize + 'px';
+                roach.style.top = topComponents + maxWindowScrollAdjusted + landingPointY + roachSize / 2 + 'px';
+
+                // handling the squashing of Sr. Roach
+                if (Math.round(landingPointY) === Math.round(landingPointScalingY * windowScrollAdjusted)) {
+                    roach.src = "/images/RIPRoachy.png";
+                    fridge.style.transform = "rotate(90deg)";
+
+                    // leave the fridge on the ground
+                    fridge.style.position = "absolute";
+                    fridge.style.top = topComponents + maxWindowScrollAdjusted + landingPointY + 'px';
+                    fridge.style.right = landingPointX;
+
+                    roachHasDied = true;
+                    console.log("What have you done? How can you live with yourself?");
+                }
             }
         });
     }, []);

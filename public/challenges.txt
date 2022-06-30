@@ -4,4 +4,9 @@ fun problems
 	- ran into this problem creating a max height for my fridge. 
 	  It's an interesting problem I could have hacked through, but I was curious how I'd go about solving this mathemetically
 
-- 
+- blending roach killer image
+	- I wasn't totally satisfied with the way my 2 unrelated images for the roach killer scene started out
+	- used 2 different linear gradients to soften the merge between the two
+
+- physics on fridge were fun to learn about
+	- lot of nitpicking with changing it to absolute positioning, making it actually fall over and in an aesthetic way

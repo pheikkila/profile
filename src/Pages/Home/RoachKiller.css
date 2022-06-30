@@ -34,6 +34,9 @@
 .fridge-img {
   position: fixed;
   transform: rotate(20deg);
+  transition: transform 1.2s;
+  transition-timing-function: cubic-bezier(1, .1, 1, .9);
+  transform-origin: 76.33% 87.67%; /* bottom corner of fridge */
   z-index: 9;
   top: 20vh;
   right: 0px;
